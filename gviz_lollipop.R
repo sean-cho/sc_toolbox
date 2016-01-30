@@ -50,7 +50,7 @@ require(BSgenome.Hsapiens.UCSC.hg19)
 require(minfi)
 require(GenomicRanges)
 require(Gviz)
-require(FDb.InfiniumMethylation.hg19)
+require(TxDb.Hsapiens.UCSC.hg19.knownGene)
 
 # Stop the code if an error is seen
 default_error <- getOption('error')
