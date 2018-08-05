@@ -13,7 +13,7 @@ sig_overlap <- function(set_a, set_b, universe){
   count_a <- length(set_a)
   count_b <- length(set_b)
   overlaps <- intersect(set_a, set_b)
-  count_overlap <- length(overlaps)
+  count_overlap <- pmax(length(overlaps) - 1, 0)
   
   p_val <- 1 - phyper(count_overlap, count_b, count_univ - count_b, count_a)
   return(p_val)
